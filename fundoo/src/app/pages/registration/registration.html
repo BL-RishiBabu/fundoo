@@ -1,0 +1,70 @@
+<div class="main-container">
+    <mat-card class="example-card" appearance="outlined">
+        <div class="layout-grid">
+            <div class="left-content">
+                <h1 class="logo-text">
+                    <span class="text-primary">G</span>
+                    <span class="text-danger">o</span>
+                    <span class="text-warning">o</span>
+                    <span class="text-primary">g</span>
+                    <span class="text-success">l</span>
+                    <span class="text-danger">e</span>
+                </h1>
+                <h2 class="title">Create your Google Account</h2>
+
+                <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                    <div class="form-grid">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>First name</mat-label>
+                            <input matInput formControlName="firstName" placeholder="First Name*">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Last name</mat-label>
+                            <input matInput formControlName="lastName" placeholder="Last Name*">
+                        </mat-form-field>
+
+                        <div class="example-full-width full-width">
+                            <mat-form-field class="example-full-width" appearance="outline"
+                                style="margin-bottom: -5px;">
+                                <mat-label>username</mat-label>
+                                <input matInput formControlName="email" placeholder="username*">
+                            </mat-form-field>
+                            <p class="mat-body-small helper-text" style="margin-bottom: 5px;">you can use letters,
+                                numbers &
+                                periods</p>
+                            <a class="hyper-text bold-link" href="#">Use my current email instead</a>
+                        </div>
+                    </div>
+
+                    <div class="form-grid pt-20">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input matInput formControlName="password" [type]="hide ? 'password' : 'text'"
+                                placeholder="Password*">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Confirm</mat-label>
+                            <input matInput formControlName="confirmPassword" [type]="hide ? 'password' : 'text'"
+                                placeholder="Confirm*">
+                        </mat-form-field>
+                    </div>
+
+                    <p class="mat-body-small helper-text">Use 8 or more characters with a mix of letters, numbers &
+                        symbols
+                    </p>
+
+                    <div class="checkbox-container">
+                        <mat-checkbox (click)="hide = !hide">Show Password</mat-checkbox>
+                    </div>
+
+                    <div class="actions-container">
+                        <a class="bold-link" (click)="goToLogin()">Sign in instead</a>
+                        <button mat-flat-button color="primary" type="submit">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </mat-card>
+</div>

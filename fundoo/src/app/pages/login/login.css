@@ -1,0 +1,90 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.logo-text {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.text-primary {
+    color: #4285F4;
+}
+
+.text-danger {
+    color: #EA4335;
+}
+
+.text-warning {
+    color: #FBBC05;
+}
+
+.text-success {
+    color: #34A853;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin: 0 0 35px 0;
+    color: #202124;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    text-align: left;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.forgot-wrapper {
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.forgot-link {
+    color: #4285F4;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+}
+
+.actions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.create-link {
+    color: #4285F4;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+}
