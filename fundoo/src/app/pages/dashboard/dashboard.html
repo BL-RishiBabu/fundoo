@@ -1,15 +1,27 @@
-<mat-toolbar color="primary">
-  <button mat-icon-button aria-label="Menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>My App</span>
-  
-  <span class="example-spacer"></span>
-  
-  <button mat-icon-button aria-label="Favorite icon" matTooltip="">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button aria-label="Share icon" matTooltip="Share">
-    <mat-icon>share</mat-icon>
-  </button>
-</mat-toolbar>
+<app-toolbar (menuClick)="sidenav.toggle()"></app-toolbar>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" opened class="app-sidenav">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content class="dashboard-content">
+
+    <!-- Take a note box -->
+    <div class="take-note-wrapper">
+      <div class="take-note-box">
+        <input matInput type="text" placeholder="Take a note..." class="take-note-input" />
+        <div class="take-note-actions">
+          <button mat-icon-button aria-label="New list">
+            <mat-icon>check_box</mat-icon>
+          </button>
+          <button mat-icon-button aria-label="Draw">
+            <mat-icon>brush</mat-icon>
+          </button>
+          <button mat-icon-button aria-label="New image">
+            <mat-icon>image</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

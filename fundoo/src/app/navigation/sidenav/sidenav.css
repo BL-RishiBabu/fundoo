@@ -1,0 +1,17 @@
+.keep-nav-list {
+  padding-top: 8px;
+}
+
+.keep-nav-list a[mat-list-item] {
+  border-radius: 0 24px 24px 0;
+  margin-right: 12px;
+  color: #202124;
+}
+
+.active-item {
+  background-color: #feefc3 !important;
+}
+
+.active-item mat-icon {
+  color: #202124 !important;
+}

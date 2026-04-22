@@ -1,0 +1,9 @@
+<mat-nav-list class="keep-nav-list">
+  @for (item of navItems; track item.label) {
+  <!-- [class.active-item]="item.active" -->
+  <a mat-list-item href="javascript:void(0);">
+    <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+    <div matListItemTitle>{{ item.label }}</div>
+  </a>
+  }
+</mat-nav-list>

@@ -1,0 +1,38 @@
+<mat-toolbar>
+  <button mat-icon-button aria-label="Menu icon" (click)="menuClick.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" alt="Keep logo"
+    style="height: 40px; margin: 0 4px;">
+  <span style="font-size: 22px; color: #5f6368; padding-right: 20px;">Keep</span>
+
+  <mat-form-field appearance="fill" class="search-field" subscriptSizing="dynamic">
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput placeholder="Search">
+  </mat-form-field>
+
+  <span class="example-spacer"></span>
+
+  @for (option of toolBarOptions; track option.icon) {
+  <button mat-icon-button aria-label="{{ option.tooltip }}" matTooltip="{{ option.tooltip }}">
+    <mat-icon>{{ option.icon }}</mat-icon>
+  </button>
+  }
+
+  <!-- <button mat-icon-button aria-label="Refresh" matTooltip="Refresh">
+    <mat-icon>refresh</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="List view" matTooltip="List view">
+    <mat-icon>view_agenda</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="Settings" matTooltip="Settings">
+    <mat-icon>settings</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="Apps" matTooltip="Apps">
+    <mat-icon>apps</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="Account" matTooltip="Account">
+    <mat-icon>account_circle</mat-icon>
+  </button> -->
+</mat-toolbar>
